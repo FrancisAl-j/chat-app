@@ -14,7 +14,6 @@ const Chat = () => {
     socket.on("chat", (data) => {
       setChatHistory((prevChatHistory) => {
         const updatedHistory = [...prevChatHistory, data];
-        console.log("Updated chatHistory:", updatedHistory); // Debug log
         return updatedHistory;
       });
     });

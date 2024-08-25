@@ -32,7 +32,6 @@ app.get("/chatHistory", async (req, res) => {
 io.on("connection", (socket) => {
   console.log("New client connected");
   socket.on("chat", (data) => {
-    console.log("Message received:", data);
     io.emit("chat", data);
   });
   socket.on("disconnect", () => {
